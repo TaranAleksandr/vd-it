@@ -1,0 +1,415 @@
+@charset "UTF-8";
+
+/*
+em - от текущего шоифта
+% - от родительской ширины
+rem - от стиля html
+vw – 1% ширины окна
+vh – 1% высоты окна
+vmin – наименьшее из (vw, vh), в IE9 обозначается vm
+vmax – наибольшее из (vw, vh)
+*/
+
+/* Определяем семейство "системных" шрифтов */
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.no-webp body{
+  background-image: url("../img/1260050_9846 1.png"); }
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* под проект */
+  font-family: "Segoe UI", Arial, sans-serif;
+  /* в "" свой шрифт под проект*/
+  font-weight: 400;
+  color: #000000;
+  line-height: 1;
+  height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.content__wrapper {
+  width: 100%;
+}
+
+.btn__wrapper {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+.btn--main {
+  background-color: #005aec;
+  color: #fff;
+}
+
+.btn--second {
+  color: #000;
+  background-color: #d9e8ff;
+}
+
+.nav {
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav__list-item {
+  display: block;
+  max-width: 16.6%;
+  width: 100%;
+  height: 8rem;
+}
+
+.nav__list-item:hover {
+  background-color: #e0e8fd;
+}
+
+.nav__list-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem 3.2rem;
+}
+
+.nav__list-item:last-child > a {
+  padding-top: 2.5rem;
+}
+
+.active {
+  background-color: #005aec;
+  color: #fff;
+}
+
+.active:hover {
+  background-color: #005aec;
+}
+
+.main {
+  height: calc(100% - 12rem);
+}
+
+.slider {
+  margin-top: 4rem;
+}
+
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider__text-wrapper {
+  max-width: 50%;
+}
+
+.slider__title {
+  font-size: 4rem;
+  font-weight: 700;
+  max-width: 100%;
+  width: 100%;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.slick-initialized .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+.slick-dots {
+  position: absolute;
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  right: 0;
+  top: 75%;
+}
+
+.slick-dots li {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #005aec;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  display: none;
+}
+
+.slick-dots .slick-active {
+  background-color: #005aec;
+}
+
+.tabs {
+  max-width: 23.5rem;
+  width: 100%;
+}
+
+.tabs__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.tabs__list-item {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.tabs__list-item a {
+  display: block;
+  padding: 1rem 2rem;
+}
+
+.tabs__list-item:hover {
+  background-color: #d9e8ff;
+}
+
+.tabs__list-item--active {
+  background-color: #d9e8ff;
+}
+
+.tabs__list-item--active::before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: #005aec;
+  top: 0;
+  left: 0;
+}
+
+.comps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comp_service:not(:target),
+.control:not(:target),
+.components:not(:target),
+.admin:not(:target) {
+  display: none;
+}
+
+.comp_service:target,
+.control:target,
+.components:target,
+.admin:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #d9e8ff;
+  height: 100%;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #d9e8ff;
+  height: 100%;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+.tab__title {
+  font-size: 2.4rem;
+  max-width: 43rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab__text {
+  font-size: 1.6rem;
+  max-width: 43rem;
+  line-height: 110%;
+}
+
+.servers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.serv_service:not(:target),
+.data-transit:not(:target),
+.data_server:not(:target),
+.server_rent:not(:target),
+.video_setup:not(:target),
+.video_service:not(:target),
+.local:not(:target),
+.mobile:not(:target),
+.wifi:not(:target),
+.skud:not(:target),
+.fingers:not(:target) {
+  display: none;
+}
+
+.serv_service:target,
+.data-transit:target,
+.data_server:target,
+.server_rent:target,
+.video_setup:target,
+.video_service:target,
+.local:target,
+.mobile:target,
+.wifi:target,
+.skud:target,
+.fingers:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #d9e8ff;
+  height: 100%;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.none {
+  display: none;
+}
+
+.webp body{ background-image: url("../img/1260050_9846 1.png"); }
